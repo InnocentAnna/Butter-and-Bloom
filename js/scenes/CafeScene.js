@@ -7,19 +7,14 @@ export default class CafeScene extends Phaser.Scene {
         // Set camera background color
         this.cameras.main.setBackgroundColor('#f5e6d3');
 
-        // Center text
-        this.add.text(512, 300, 'Cafe Scene Working!', {
-            fontSize: '48px',
-            fill: '#8b6f47',
-            fontFamily: 'Arial',
-            fontStyle: 'bold',
-        }).setOrigin(0.5);
-
-        // Brown floor at bottom
+        // Wooden floor at bottom
         this.add.rectangle(512, 720, 1024, 48, 0x8b6f47).setOrigin(0.5);
 
-        // Orange counter
-        this.add.rectangle(512, 500, 300, 150, 0xd4a574).setOrigin(0.5);
+        // Large window frame (wooden)
+        this.add.rectangle(512, 200, 300, 200, 0x8b6f47).setOrigin(0.5); // Frame
+
+        // Window glass (blue sky)
+        this.add.rectangle(512, 200, 280, 180, 0x87ceeb).setOrigin(0.5); // Glass
 
         // Menu button to return
         const backButton = this.add.rectangle(50, 30, 80, 35, 0xd4a574)
