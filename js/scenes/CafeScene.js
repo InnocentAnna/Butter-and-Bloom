@@ -13,29 +13,29 @@ export default class CafeScene extends Phaser.Scene {
         // Wooden wall trim (just above floor)
         this.add.rectangle(512, 700, 1000, 20, 0x9b7d5f).setOrigin(0.5);
 
-        // Large window frame (wooden)
-        this.add.rectangle(512, 200, 300, 200, 0x8b6f47).setOrigin(0.5); // Frame
+        // Large window frame (wooden) - 25% larger, moved higher
+        this.add.rectangle(512, 160, 375, 250, 0x8b6f47).setOrigin(0.5); // Frame
 
-        // Window glass (blue sky)
-        this.add.rectangle(512, 200, 280, 180, 0x87ceeb).setOrigin(0.5); // Glass
+        // Window glass (blue sky) - 25% larger
+        this.add.rectangle(512, 160, 350, 225, 0x87ceeb).setOrigin(0.5); // Glass
 
         // Window dividers using graphics
         const dividerGraphics = this.make.graphics({ x: 0, y: 0, add: true });
         dividerGraphics.lineStyle(3, 0x8b6f47);
         // Vertical divider
-        dividerGraphics.lineBetween(512, 110, 512, 290);
+        dividerGraphics.lineBetween(512, 47, 512, 273);
         // Horizontal divider
-        dividerGraphics.lineBetween(372, 200, 652, 200);
+        dividerGraphics.lineBetween(349, 160, 675, 160);
 
-        // Soft sunlight - semi-transparent pale yellow rectangle
-        this.add.rectangle(400, 450, 400, 300, 0xfffff0, 0.15).setOrigin(0.5);
+        // Soft sunlight - diagonal from window to lower-left
+        this.add.rectangle(300, 500, 500, 350, 0xfffff0, 0.15).setOrigin(0.5).setRotation(-0.3);
 
-        // Café counter - main body
-        this.add.rectangle(512, 580, 500, 120, 0xc19a6b).setOrigin(0.5);
-        this.add.rectangle(512, 580, 500, 120, 0x8b6f47, false).setOrigin(0.5).setStrokeStyle(3, 0x6b4f2f);
+        // Café counter - main body (10% wider, moved lower)
+        this.add.rectangle(512, 600, 550, 120, 0xc19a6b).setOrigin(0.5);
+        this.add.rectangle(512, 600, 550, 120, 0x8b6f47, false).setOrigin(0.5).setStrokeStyle(3, 0x6b4f2f);
 
         // Counter top surface (darker for 3D effect)
-        this.add.rectangle(512, 540, 500, 20, 0xa0826d).setOrigin(0.5);
+        this.add.rectangle(512, 560, 550, 20, 0xa0826d).setOrigin(0.5);
 
         // Menu button to return
         const backButton = this.add.rectangle(50, 30, 80, 35, 0xd4a574)
