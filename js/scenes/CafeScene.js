@@ -27,6 +27,13 @@ export default class CafeScene extends Phaser.Scene {
         // Soft sunlight - semi-transparent pale yellow rectangle
         this.add.rectangle(400, 450, 400, 300, 0xfffff0, 0.15).setOrigin(0.5);
 
+        // Café counter - main body
+        this.add.rectangle(512, 580, 500, 120, 0xc19a6b).setOrigin(0.5);
+        this.add.rectangle(512, 580, 500, 120, 0x8b6f47, false).setOrigin(0.5).setStrokeStyle(3, 0x6b4f2f);
+
+        // Counter top surface (darker for 3D effect)
+        this.add.rectangle(512, 540, 500, 20, 0xa0826d).setOrigin(0.5);
+
         // Menu button to return
         const backButton = this.add.rectangle(50, 30, 80, 35, 0xd4a574)
             .setInteractive()
