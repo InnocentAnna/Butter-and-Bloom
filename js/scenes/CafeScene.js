@@ -10,6 +10,9 @@ export default class CafeScene extends Phaser.Scene {
         // Wooden floor at bottom
         this.add.rectangle(512, 720, 1024, 48, 0x8b6f47).setOrigin(0.5);
 
+        // Wooden wall trim (just above floor)
+        this.add.rectangle(512, 700, 1000, 20, 0x9b7d5f).setOrigin(0.5);
+
         // Large window frame (wooden)
         this.add.rectangle(512, 200, 300, 200, 0x8b6f47).setOrigin(0.5); // Frame
 
