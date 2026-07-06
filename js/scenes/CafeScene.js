@@ -16,6 +16,17 @@ export default class CafeScene extends Phaser.Scene {
         // Window glass (blue sky)
         this.add.rectangle(512, 200, 280, 180, 0x87ceeb).setOrigin(0.5); // Glass
 
+        // Window dividers using graphics
+        const dividerGraphics = this.make.graphics({ x: 0, y: 0, add: true });
+        dividerGraphics.lineStyle(3, 0x8b6f47);
+        // Vertical divider
+        dividerGraphics.lineBetween(512, 110, 512, 290);
+        // Horizontal divider
+        dividerGraphics.lineBetween(372, 200, 652, 200);
+
+        // Soft sunlight - semi-transparent pale yellow rectangle
+        this.add.rectangle(400, 450, 400, 300, 0xfffff0, 0.15).setOrigin(0.5);
+
         // Menu button to return
         const backButton = this.add.rectangle(50, 30, 80, 35, 0xd4a574)
             .setInteractive()
