@@ -12,8 +12,7 @@ export default class BootScene extends Phaser.Scene {
         }).setOrigin(0.5);
 
         // Load all game assets here
-        // this.load.image('key', 'assets/images/filename.png');
-        // this.load.audio('key', 'assets/audio/filename.mp3');
+        this.load.image('apple', 'assets/images/apple.png');
     }
 
     create() {
