@@ -33,7 +33,9 @@ export default class CafeScene extends Phaser.Scene {
         // Counter (physics)
 this.counter = this.physics.add.staticImage(512, 550, null);
 
-this.counter.setSize(550, 10);
+this.counter.body.setSize(550, 10); 
+this.counter.refreshBody();
+        
 this.counter.setVisible(false);
 
 // Draw counter
