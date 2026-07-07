@@ -13,7 +13,7 @@ export default class BootScene extends Phaser.Scene {
 
         // Load all game assets here
         this.load.image('apple', 'assets/images/apple.png');
-        this.load.image('player', 'assets/images/idle.png');
+        this.load.image('player', 'assets/images/character_femalePerson_idle.png');
     }
 
     create() {
