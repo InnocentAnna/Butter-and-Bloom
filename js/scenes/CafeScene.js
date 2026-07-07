@@ -30,7 +30,7 @@ export default class CafeScene extends Phaser.Scene {
         // Soft sunlight - diagonal from window to lower-left
         this.add.rectangle(300, 500, 500, 350, 0xfffff0, 0.15).setOrigin(0.5).setRotation(-0.3);
 
-        this.add.image(512, 520, 'player').setScale(1.5).setOrigin(0.5);
+        this.add.image(512, 535, 'player').setScale(1.5).setOrigin(0.5);
         // Café counter - main body (10% wider, moved lower)
         this.add.rectangle(512, 600, 550, 120, 0xc19a6b).setOrigin(0.5);
         this.add.rectangle(512, 600, 550, 120, 0x8b6f47, false).setOrigin(0.5).setStrokeStyle(3, 0x6b4f2f);
