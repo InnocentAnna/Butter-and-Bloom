@@ -46,6 +46,8 @@ this.add.rectangle(512, 560, 550, 20, 0xa0826d);
         this.player = this.physics.add.sprite(512, 650, 'player');
         this.player.setScale(1.5);
         this.player.setCollideWorldBounds(true);
+
+        this.physics.add.collider(this.player, this.counter);
         
         // Apple on counter
         this.add.image(512, 515, 'apple').setScale(2).setOrigin(0.5);
