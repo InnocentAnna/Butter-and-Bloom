@@ -75,7 +75,7 @@ export default class CafeScene extends Phaser.Scene {
     update() {
     this.player.setVelocity(0);
 
-let speed = 200;
+const speed = 200;
 
     if (this.cursors.left.isDown) {
         this.player.setVelocityX(-speed);
