@@ -29,10 +29,6 @@ export default class CafeScene extends Phaser.Scene {
 
         // Soft sunlight - diagonal from window to lower-left
         this.add.rectangle(300, 500, 500, 350, 0xfffff0, 0.15).setOrigin(0.5).setRotation(-0.3);
-
-        this.player = this.physics.add.sprite(512, 535, 'player');
-        this.player.setScale(1.5);
-        this.player.setCollideWorldBounds(true); 
         
         // Café counter - main body (10% wider, moved lower)
         this.add.rectangle(512, 600, 550, 120, 0xc19a6b).setOrigin(0.5);
@@ -40,7 +36,11 @@ export default class CafeScene extends Phaser.Scene {
 
         // Counter top surface (darker for 3D effect)
         this.add.rectangle(512, 560, 550, 20, 0xa0826d).setOrigin(0.5);
-
+        
+        this.player = this.physics.add.sprite(512, 535, 'player');
+        this.player.setScale(1.5);
+        this.player.setCollideWorldBounds(true);
+        
         // Apple on counter
         this.add.image(512, 515, 'apple').setScale(2).setOrigin(0.5);
 
