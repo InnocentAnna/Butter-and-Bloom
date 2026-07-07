@@ -71,4 +71,5 @@ export default class CafeScene extends Phaser.Scene {
             this.scene.start('MenuScene');
         });
     }
+    this.cursors = this.input.keyboard.createCursorKeys();
 }
