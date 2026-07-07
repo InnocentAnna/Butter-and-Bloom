@@ -70,6 +70,6 @@ export default class CafeScene extends Phaser.Scene {
         backButton.on('pointerdown', () => {
             this.scene.start('MenuScene');
         });
+        this.cursors = this.input.keyboard.createCursorKeys();
     }
-    this.cursors = this.input.keyboard.createCursorKeys();
 }
