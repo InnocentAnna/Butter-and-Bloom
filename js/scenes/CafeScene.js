@@ -39,7 +39,7 @@ export default class CafeScene extends Phaser.Scene {
         this.add.rectangle(512, 560, 550, 20, 0xa0826d).setOrigin(0.5);
 
         // Apple on counter
-        this.add.image(512, 540, 'apple').setScale(2).setOrigin(0.5);
+        this.add.image(512, 515, 'apple').setScale(2).setOrigin(0.5);
 
         // Menu button to return
         const backButton = this.add.rectangle(50, 30, 80, 35, 0xd4a574)
