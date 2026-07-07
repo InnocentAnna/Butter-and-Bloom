@@ -75,20 +75,22 @@ export default class CafeScene extends Phaser.Scene {
     update() {
     this.player.setVelocity(0);
 
+let speed = 200;
+
     if (this.cursors.left.isDown) {
-        this.player.setVelocityX(-200);
+        this.player.setVelocityX(-speed);
     }
 
     if (this.cursors.right.isDown) {
-        this.player.setVelocityX(200);
+        this.player.setVelocityX(speed);
     }
 
     if (this.cursors.up.isDown) {
-        this.player.setVelocityY(-200);
+        this.player.setVelocityY(-speed);
     }
 
     if (this.cursors.down.isDown) {
-        this.player.setVelocityY(200);
+        this.player.setVelocityY(speed);
     }
 }
 }
