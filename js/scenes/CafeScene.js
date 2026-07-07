@@ -73,5 +73,22 @@ export default class CafeScene extends Phaser.Scene {
         this.cursors = this.input.keyboard.createCursorKeys();
     }
     update() {
+    this.player.setVelocity(0);
+
+    if (this.cursors.left.isDown) {
+        this.player.setVelocityX(-200);
+    }
+
+    if (this.cursors.right.isDown) {
+        this.player.setVelocityX(200);
+    }
+
+    if (this.cursors.up.isDown) {
+        this.player.setVelocityY(-200);
+    }
+
+    if (this.cursors.down.isDown) {
+        this.player.setVelocityY(200);
+    }
 }
 }
