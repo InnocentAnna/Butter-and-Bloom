@@ -37,7 +37,7 @@ export default class CafeScene extends Phaser.Scene {
         // Counter top surface (darker for 3D effect)
         this.add.rectangle(512, 560, 550, 20, 0xa0826d).setOrigin(0.5);
         
-        this.player = this.physics.add.sprite(512, 535, 'player');
+        this.player = this.physics.add.sprite(512, 650, 'player');
         this.player.setScale(1.5);
         this.player.setCollideWorldBounds(true);
         
